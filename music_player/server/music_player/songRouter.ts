@@ -28,8 +28,8 @@ SongsRouter.post('/', async (req: Request, resp: Response) => {
     const song = new Song(songPayload)
 
     try {
-        const newSong = song.save();
-        resp.status(204).json(newSong)
+        const newSong = await song.save();
+        resp.status(202).json(newSong)
     }
     catch (err) {
         resp.status(500).json({ message: err.message })

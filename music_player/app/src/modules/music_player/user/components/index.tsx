@@ -30,15 +30,7 @@ export function UsersPage() {
         call(() => userService.addUser(user).then(() => userService.getUsers()))
 
         console.log(userApply)
-    }
-    const callback = useCallback(
-        () => {
-            console.log("userApply", userApply);
-
-        },
-        [userApply],
-    )
-    callback()
+    }  
     const data: any = userApply.data
     return (
         <>

@@ -12,8 +12,8 @@ const songsSchema = new Schema({
     },
     upload_date: {
         type: Date,
-        default: Date.now,
-        required: true
+        required: true,
+        default: Date.now
     },
     media_url: {
         type: String,

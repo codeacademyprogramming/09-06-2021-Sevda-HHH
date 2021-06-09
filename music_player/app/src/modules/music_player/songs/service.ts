@@ -3,7 +3,7 @@ import { ISong } from '../models';
 
 class SongService {
     private instance = axios;
-    baseUrl = `http://localhost:8000`
+    baseUrl = `http://localhost:800 0`
 
     public getSongs(): Promise<ISong[]> {
         return axios.get(`${this.baseUrl}/songs`).then((res) => res.data)
@@ -14,7 +14,7 @@ class SongService {
     }
 
     public addSong(song: ISong): Promise<ISong> {
-        return axios.post(`${this.baseUrl}/songs`)
+        return axios.post(`${this.baseUrl}/songs`, song).then((res) => res.data);
     }
 }
 

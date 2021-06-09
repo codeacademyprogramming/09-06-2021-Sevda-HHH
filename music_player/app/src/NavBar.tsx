@@ -1,6 +1,4 @@
 import { AppBar, Button, IconButton, Toolbar, Typography } from '@material-ui/core'
-import React from 'react'
-import MenuIcon from '@material-ui/icons/Menu';
 
 
 export const NavBar = () => {
@@ -8,13 +6,10 @@ export const NavBar = () => {
         <div>
             <AppBar position="static">
                 <Toolbar>
-                    <IconButton edge="start" color="inherit" aria-label="menu">
-                        <MenuIcon />
-                    </IconButton>
                     <Typography variant="h6" >
-                        News
+                        Music Player
                     </Typography>
-                    <Button color="inherit">Login</Button>
+                    <a className="text-decoration-none text-white p-2" href="/songs" color="inherit"><b>Songs</b></a>
                 </Toolbar>
             </AppBar>
         </div>
